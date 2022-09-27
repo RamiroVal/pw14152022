@@ -1,0 +1,93 @@
+/*
+  Tipos de selectores
+    - Selectores básicos
+    - Selectores combinadores
+    - Selectores de pseudo-elementos
+    - Selectores de pseudo-clases
+
+-->-->-->>->>SELECTORES BÁSICOS<<--<<--<--<--
+  - etiquetas, clases, id, universales y atributos
+
+
+
+
+*/
+
+h1 {
+	background-color: aqua;
+}
+
+.titulo {
+	color: rebeccapurple;
+}
+
+#parrafo {
+	background-color: black;
+}
+
+* {
+	/*Universal*/
+	margin: 0;
+
+	background-color: blanchedalmond;
+}
+
+/* Atributos*/
+[href] {
+	color: green;
+}
+
+/*Se selecciona los elementos que tienen ese atributo y valor*/
+[href="#"] {
+	color: red;
+}
+
+/*Selecciona los elemetos que contengan ese atributo y valor al menos una vez*/
+[class~="verde"] {
+	color: blue;
+}
+
+/*Selecciona los elemetos que contengan ese atributo y exactamente ese valor o empiece por el valor seguido de un guión*/
+[class|="verde"] {
+	color: violet;
+}
+
+/*Selecciona los elemetos que contengan ese atributo y empiecen por ese valor*/
+[class^="verde"] {
+	color: green;
+}
+
+/*Selecciona los elemetos que contengan ese atributo y termine por ese valor*/
+[class$="verde"] {
+	color: palevioletred;
+}
+
+/*Selecciona los elemetos que contengan ese atributo y contenta ese valor*/
+[class*="verde"] {
+	color: blue;
+}
+
+/*
+->>->>->>Selector combinador<<-<<-<<-
+  - Hermano adyacente, Hermano general, descendente e hijo directo
+*/
+
+/*Hermano adyacente, selecciona a un hermano que este justo debajo, hermano inferior*/
+h1 + h2 {
+	color: red;
+}
+
+/*Selector de hermano general, selecciona todos los hermnanos que esten debajo del elemento y deben compartir el mismo padre*/
+h1 ~ h3 {
+	color: blue;
+}
+
+/*Selector descendente, aplica estilos a todos los elementos que estan dentro de este, el estilo aplica a todos los hijos*/
+div p {
+	color: purple;
+}
+
+/*Selector de hijo directo, selecciona todos los hijos directos*/
+span > p {
+	color: green;
+}
