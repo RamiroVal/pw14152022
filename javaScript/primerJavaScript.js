@@ -17,3 +17,9 @@ function quitarSITEC() {
     alert("No se fue SITEC")
   }
 }
+
+async function traerPersona() {
+  const respuesta = await fetch("https://randomuser.me/api/")
+  const datos = await respuesta.json()
+  console.log(datos.results[0].name.last)
+}
