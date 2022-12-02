@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Articulos from '../views/Articulos.vue'
+import Detalle from '../components/Detalle.vue'
+import Editar from '../components/Editar.vue'
+import Nuevo from '../components/Nuevo.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +13,28 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/articulos',
+    name: 'articulos',
+    component: Articulos
+  },
+  {
+    path: '/detalle',
+    name: 'detalle',
+    component: Detalle,
+    props: true
+  },
+  {
+    path: '/editar',
+    name: 'editar',
+    component: Editar,
+    props: true
+  },
+  {
+    path: '/nuevo',
+    name: 'nuevo',
+    component: Nuevo
   },
   {
     path: '/about',
