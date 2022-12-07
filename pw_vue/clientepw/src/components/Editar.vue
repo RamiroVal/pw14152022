@@ -9,15 +9,18 @@
 			id="txtdescripcion"
 			v-model="articulos.descripcion"
 			class="form-control"
+			required
 		/>
 		<br />
 		<label for="txtcantidad">Cantidad</label>
 		<input
+			disabled
 			type="text"
 			name="txtcantidad"
 			id="txtcantidad"
 			v-model="articulos.cantidad"
 			class="form-control"
+			required
 		/>
 		<br />
 		<label for="txtprecio">Precio</label>
@@ -27,6 +30,7 @@
 			id="txtprecio"
 			v-model="articulos.precio"
 			class="form-control"
+			required
 		/>
 		<br />
 		<button @click.prevent="actualizar()" class="btn btn-primary btn-lg">
@@ -58,7 +62,6 @@ export default {
 			await axios
 				.get(URL_DATOS + "/articulos/" + this.id)
 				.then(function (response) {
-					console.log(response.data[0]);
 					a = response.data[0];
 				})
 				.catch(function (error) {

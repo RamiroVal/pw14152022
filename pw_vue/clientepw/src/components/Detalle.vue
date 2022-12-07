@@ -33,7 +33,6 @@ export default {
 			await axios
 				.get(URL_DATOS + "/articulos/" + this.id)
 				.then(function (response) {
-					console.log(response.data[0]);
 					a = response.data[0];
 				})
 				.catch(function (error) {
